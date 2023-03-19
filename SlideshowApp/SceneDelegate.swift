@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Lesson5 test
+//  SlideshowApp
 //
 //  Created by user on 2023/03/18.
 //
