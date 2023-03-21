@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="landscape" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,24 +11,25 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson5_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide_1" translatesAutoresizingMaskIntoConstraints="NO" id="zcD-bt-RkB" userLabel="slideImg">
-                                <rect key="frame" x="293" y="45" width="309" height="145"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="zcD-bt-RkB" userLabel="slideImg">
+                                <rect key="frame" x="47.666666666666657" y="94" width="280" height="160"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="2HC-yy-E6V"/>
                                     <constraint firstAttribute="height" constant="160" id="qRi-We-NLW"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FOS-PX-Jph" appends="YES" id="jHw-FS-EVf"/>
+                                    <outletCollection property="gestureRecognizers" destination="3sB-Q6-O6s" appends="YES" id="nvR-YP-qyV"/>
+                                    <outletCollection property="gestureRecognizers" destination="HuN-Te-quF" appends="YES" id="ynJ-Zw-3y4"/>
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="i86-DH-tvc">
-                                <rect key="frame" x="306" y="260" width="200" height="32"/>
+                                <rect key="frame" x="87.666666666666686" y="304" width="200" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-8Q-J9x">
                                         <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="32"/>
@@ -45,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VK-LF-HId">
-                                        <rect key="frame" x="72.666666666666686" y="0.0" width="54.666666666666657" height="32"/>
+                                        <rect key="frame" x="72.666666666666671" y="0.0" width="54.666666666666671" height="32"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="戻る">
                                             <backgroundConfiguration key="background">
@@ -92,32 +93,42 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FOS-PX-Jph">
+                <tapGestureRecognizer id="6dY-pb-Lws">
                     <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="eCw-fJ-004"/>
-                        <segue destination="bZK-8K-ElM" kind="show" id="swc-f1-WHP"/>
+                        <action selector="tapText:" destination="BYZ-38-t0r" id="KVg-0G-hAA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3sB-Q6-O6s">
+                    <connections>
+                        <action selector="tapImagetest:" destination="BYZ-38-t0r" id="R31-6i-ugT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HuN-Te-quF">
+                    <connections>
+                        <action selector="tapImage2:" destination="BYZ-38-t0r" id="kCb-GE-9K1"/>
+                        <segue destination="bZK-8K-ElM" kind="show" id="OLP-zC-kZj"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-13.858695652173914" y="60.869565217391312"/>
+            <point key="canvasLocation" x="-671" y="131"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="27c-BO-6Cn">
             <objects>
-                <viewController id="bZK-8K-ElM" customClass="ResultViewController" customModule="Lesson5_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bZK-8K-ElM" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMv-7J-3Kl">
-                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yx3-fi-wXE">
-                                <rect key="frame" x="196" y="20" width="420" height="240"/>
+                                <rect key="frame" x="-22.666666666666657" y="20" width="420.33333333333326" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="420" id="8gC-yc-91d"/>
                                     <constraint firstAttribute="height" constant="240" id="Q55-lw-1Dz"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQs-0Z-qvq">
-                                <rect key="frame" x="378.66666666666669" y="310" width="54.666666666666686" height="32"/>
+                                <rect key="frame" x="160.33333333333334" y="310" width="54.666666666666657" height="32"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る">
                                     <backgroundConfiguration key="background">
@@ -148,11 +159,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKA-Qu-1rm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fbY-Mj-dkb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="718.20652173913049" y="66.666666666666671"/>
+            <point key="canvasLocation" x="108" y="132"/>
         </scene>
     </scenes>
     <resources>
-        <image name="slide_1" width="154" height="98"/>
+        <image name="slide_1.png" width="462" height="294"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

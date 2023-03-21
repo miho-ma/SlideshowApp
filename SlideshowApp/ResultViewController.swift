@@ -9,7 +9,6 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var slideImage2: UIImageView!
     
     let imageName = ["slide_1", "slide_2", "slide_3", "slide_4"]
@@ -22,7 +21,6 @@ class ResultViewController: UIViewController {
         
         let name = imageName[changeImgNo2]
         slideImage2.image = UIImage(named: name)
-
     }
     
 
